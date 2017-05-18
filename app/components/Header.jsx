@@ -1,5 +1,4 @@
 import React from 'react'
-import {Button} from './Button.jsx'
 
 export class Header extends React.Component ::
   constructor (props) ::
@@ -10,19 +9,19 @@ export class Header extends React.Component ::
       <div > 
         <div className="row"> 
           <div className="four columns u-full-width">
-            <code> console.log @ "{this.props.input}" </code>
+            <code> this.init @ piledriver </code>
           </div>
           <div className="four columns u-full-width">
             <code> console.log @ "{this.props.input}" </code>
           </div>
           <div className="four columns u-full-width">
-            <code> console.log @ "{this.props.input}" </code>
+            <code> brain.map @ knowledge </code>
           </div>
         </div> 
         <div className="row"> 
           <div className="four columns u-full-width">'</div>
           <div className="center-aligned four columns u-full-width">
-            <Button onClick={sayHello} text="click me"/>
+            <button onClick={sayHello} >click me</button>
           </div>
           <div className="four columns u-full-width">'</div>
         </div> 
