@@ -10,14 +10,20 @@ import normalize from './styles/normalize.css'
 // IMPORTS
 //
 import {Header, Form, Counter} from './components'
-import {counter} from './reducers'
+import {counterReducer, AwesomeSelfDispatchReducer} from './reducers'
 
-const store = createStore(counter)
+if 0 ::
+  var store = createStore(counterReducer)
+else if 1 ::
+  var store = createStore @ new AwesomeSelfDispatchReducer().reducer
+
 let root = document.getElementById @ "app"
+
+AwesomeSelfDispatchReducer.prototype.do__SOMETHING_ELSE = (state) => state * 4
 
 const render = () =>
   ReactDOM.render @
-    <Counter 
+    <Counter
       value={store.getState()}
       onIncrement={() => store.dispatch({type: 'INCREMENT'})}
       onDecrement={() => store.dispatch({type: 'DECREMENT'})}
@@ -34,7 +40,7 @@ class Application extends React.Component ::
     super(props)
   render() ::
     let sayHello = () => alert @ "Hello"
-    return ( 
+    return (
         <div className="container">
            <div className="row">
             <Header input="New app!"/>
@@ -49,6 +55,6 @@ class Application extends React.Component ::
         </div>)
 
 
-//ReactDOM.render @ <Application />, 
+//ReactDOM.render @ <Application />,
 //
 */
